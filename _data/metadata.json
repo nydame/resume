@@ -1,15 +1,15 @@
 {
-  "title": "Your Blog Name",
-  "url": "https://myurl.com/",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "title": "Felicia Betancourt: Fullstack Developer",
+  "url": "https://nydame.github.io/resume/",
+  "description": "I build robust data models and delightful user interfaces. I am focused like a laser on learning new things and improving my craft.",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "I build robust data models and delightful user interfaces. I am focused like a laser on learning new things and improving my craft.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://myurl.com/"
+    "id": "https://nydame.github.io/resume/"
   },
   "author": {
-    "name": "Your Name Here",
-    "email": "youremailaddress@example.com"
+    "name": "Felicia María Betancourt",
+    "email": "info@go-firefly.com"
   }
 }
