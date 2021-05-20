@@ -1,27 +1,32 @@
+/* Colors */
 :root {
-  --red: #C5004A;
-  --darkred: #7F0036;
   --lightgray: #e0e0e0;
-  --gray: #C0C0C0;
+  --gray: #c0c0c0;
   --darkgray: #333;
-  --navy: #17050F;
+  --navy: #17050f;
   --blue: #082840;
   --white: #fff;
   --main: #afe1da;
   --aux: #757090;
   --space: 1em;
 }
+
+/* Global stylesheet */
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: system-ui, sans-serif;
+  font-family: -apple-system, system-ui, sans-serif;
   color: var(--darkgray);
 }
-h1, h2 {color: var(--main, #afe1da);}
+h1,
+h2 {
+  color: var(--main, #afe1da);
+}
 h2 {
   padding-top: var(--space, 1em);
 }
@@ -43,7 +48,9 @@ a[href] {
 a[href]:visited {
   color: var(--navy);
 }
-ul {padding-bottom: var(--space, 1em);}
+ul {
+  padding-bottom: var(--space, 1em);
+}
 main {
   padding: 1rem;
 }
@@ -68,7 +75,10 @@ table th {
 
 pre,
 code {
-  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
+    "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
+    "Courier New", Courier, monospace;
   line-height: 1.5;
 }
 pre {
@@ -87,7 +97,7 @@ pre {
   -ms-hyphens: none;
   hyphens: none;
   padding: 1em;
-  margin: .5em 0;
+  margin: 0.5em 0;
   background-color: var(--aux, #757090);
 }
 li:first-child {
@@ -98,6 +108,9 @@ li {
   list-style-type: none;
   margin-top: calc(var(--space, 1em) * 0.5);
   text-indent: var(--space);
+}
+code {
+  word-break: break-all;
 }
 .highlight-line {
   display: block;
@@ -121,7 +134,7 @@ li {
 }
 .highlight-line-active {
   background-color: #444;
-  background-color: hsla(0, 0%, 27%, .8);
+  background-color: hsla(0, 0%, 27%, 0.8);
 }
 .highlight-line-add {
   background-color: #45844b;
@@ -141,7 +154,9 @@ li {
   text-decoration: none;
 }
 
-small {font-size: calc(var(--space, 1em) * 0.9);}
+small {
+  font-size: calc(var(--space, 1em) * 0.9);
+}
 
 /* Nav */
 .nav {
@@ -168,7 +183,11 @@ small {font-size: calc(var(--space, 1em) * 0.9);}
   padding: 0;
 }
 .postlist-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
   counter-increment: start-from -1;
+  line-height: 1.8;
 }
 .postlist-item:before {
   display: inline-block;
@@ -186,8 +205,11 @@ small {font-size: calc(var(--space, 1em) * 0.9);}
   word-spacing: -0.5px;
 }
 .postlist-link {
-  display: inline-block;
-  padding: 0.25em 0.1875em; /* 4px 3px /16 */
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  text-underline-position: from-font;
+  text-underline-offset: 0;
+  text-decoration-thickness: 1px;
 }
 .postlist-item-active .postlist-link {
   font-weight: bold;
@@ -197,23 +219,35 @@ small {font-size: calc(var(--space, 1em) * 0.9);}
   font-weight: 700;
 }
 
-
 /* Tags */
-.tag {
-  display: inline-block;
-  vertical-align: text-top;
+.post-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
-  font-size: 0.625em; /* 10px /16 */
-  padding: 2px 4px;
+  font-size: 0.6875em; /* 11px /16 */
+  padding: 0.09090909090909em 0.3636363636364em; /* 1px 4px /11 */
   margin-left: 0.8em; /* 8px /10 */
-  background-color: var(--red);
-  color: var(--white);
+  color: var(--darkgray);
+  border: 1px solid var(--gray);
   border-radius: 0.25em; /* 3px /12 */
   text-decoration: none;
+  line-height: 1.8;
+}
+a[href].post-tag,
+a[href].post-tag:visited {
+  color: inherit;
+}
+a[href].post-tag:hover,
+a[href].post-tag:focus {
+  background-color: var(--lightgray);
 }
 a[href].tag,
 a[href].tag:visited {
   color: var(--white);
+}
+.postlist-item > .post-tag {
+  align-self: center;
 }
 
 /* Warning */
@@ -230,7 +264,7 @@ a[href].tag:visited {
   font-family: sans-serif;
   text-decoration: none;
   font-style: normal;
-  margin-left: .1em;
+  margin-left: 0.1em;
 }
 a[href].direct-link,
 a[href].direct-link:visited {
