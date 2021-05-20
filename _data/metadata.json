@@ -1,6 +1,7 @@
 {
   "title": "Felicia Betancourt: Fullstack Developer",
   "url": "https://nydame.github.io/resume/",
+  "language": "en",
   "description": "I build robust data models and delightful user interfaces. I am focused like a laser on learning new things and improving my craft.",
   "feed": {
     "subtitle": "I build robust data models and delightful user interfaces. I am focused like a laser on learning new things and improving my craft.",
@@ -10,7 +11,7 @@
   },
   "jsonfeed": {
     "path": "/feed/feed.json",
-    "url": "https://example.com/feed/feed.json"
+    "url": "https://nydame.github.io/feed/feed.json"
   },
   "author": {
     "name": "Felicia María Betancourt",
