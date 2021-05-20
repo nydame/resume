@@ -8,6 +8,10 @@
     "path": "/feed/feed.xml",
     "id": "https://nydame.github.io/resume/"
   },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://example.com/feed/feed.json"
+  },
   "author": {
     "name": "Felicia María Betancourt",
     "email": "info@go-firefly.com"
